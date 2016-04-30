@@ -1,0 +1,85 @@
+﻿@{
+    Layout = "~/Views/Shared/mylayout.cshtml";
+}
+
+<head>
+<link rel="stylesheet" href="~/content/add/style.css" />
+<title>add doctor</title>
+</head>
+
+<div class="content">
+            <div class="heading">
+                   <p>Fill Required Information :</p>
+            </div>
+			<div class="form">
+            <form action="@Url.Action("add","Add")" method="post" enctype="multipart/form-data">
+               <div class="personal">
+               		<p>Personal information:</p>
+                           <input type="text" name="name" value="" placeholder="Name" required />
+                           <br />
+                           <input type="tel"  name="phone_num" value="" placeholder="Phone" required />
+                           <br />
+                 <!--          <input type="text" name="address" value="" placeholder="Address" required />
+                           <br />
+                 -->
+                           <input type="text" name="city" value="" placeholder="city" required />
+                           <br />
+                    
+                           <div class="radio">
+                               <label>Male</label>
+                               <input type="radio" name="category" value="male" class="male_radio"  />
+                               <br />
+                               <label>Female</label>
+                               <input type="radio" name="category" value="female" />
+                               </div>
+                              <input type="text" name="education" placeholder="education" value="" required />
+                   <br />
+
+                 </div>
+               
+               <div class="professional">
+
+               		<p>Professional Information: </p>
+                          <input type="text" name="diseases" placeholder="diseases" value="" required />
+                   <br />
+                   <input type="text" name="diseases2" placeholder="diseases Optional" value=""  />
+                   <br />
+                   <input type="text" name="diseases3" placeholder="diseases Optional" value=""  />
+                   <br />
+               			  <input type="text" name="experience" placeholder="experience" value="" required />
+                           <br />
+                          <input type="text" name="specialization" placeholder="specialization" value="" required />
+                   <br />
+
+                             <!--Areasssss-->
+
+
+                           <input type="text" name="area1" placeholder="area1" value="" required />
+                           <br />
+                           <input type="text" name="area2" placeholder="area2 optional" value=""  />
+                           <br /> 
+                           <input type="text" name="area3" placeholder="area3 optional" value=""  />
+                           <br />
+                           <input type="text" name="fees1" placeholder="fees1" value="" required /> 
+                           <input type="text" name="fees2" placeholder="fees2 optional" value=""  /> 
+                           <input type="text" name="fees3" placeholder="fees3 optional" value=""  />                
+                           <input type="text" name="days1" placeholder="days1" value="" required  />
+                           <br />
+                             <input type="text" name="days2" placeholder="days2 Optional" value="" />
+                           <br />
+                           <input type="text" name="days3" placeholder="days3 Optional" value=""  />
+                           <br />
+                           <!--TIME-->
+                           <input type="time" name="start_time1" placeholder="Area1 Start time" value="" />
+                           <input type="time" name="end_time1" placeholder="Area1 End time" value="" />
+                           <input type="time" name="start_time2" placeholder="Area2 Start time" value="" />
+                           <input type="time" name="end_time2" placeholder="Area2 End time" value="" />
+                           <input type="time" name="start_time3" placeholder="Area3 Start time" value="" />
+                           <input type="time" name="end_time3" placeholder="Area3 End time" value="" />
+                        
+                          <input type="file" name="image" />
+                           <input type="submit" name="add" value="Add" style="color:#136DA2" />
+               </div>
+            </form>
+            </div>
+</div>

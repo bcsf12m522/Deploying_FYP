@@ -1,0 +1,106 @@
+﻿@model IEnumerable<object>
+@{
+    List<EAD_Project.Model.Doctor> firstDoctor = Model.ToList()[0] as List<EAD_Project.Model.Doctor>;
+    List<EAD_Project.Model.Area> firstArea = Model.ToList()[1] as List<EAD_Project.Model.Area>;
+    List<EAD_Project.Model.Disease> firstDisease = Model.ToList()[2] as List<EAD_Project.Model.Disease>;
+}
+
+@{
+    Layout = "~/Views/Shared/mylayout.cshtml";
+}
+<head>
+<link rel="stylesheet" href="~/content/edit/style.css" />
+<title>Edit_doctor</title>
+</head>
+
+<div class="content">
+            <div class="heading">
+                   <p style="color:#136DA2">Fill Required Information :</p>
+            </div>
+    <!--DOCTOR-->
+			<div class="form">
+         
+                    
+                <form action="@Url.Action("update","Edit", new {id=@firstDoctor[0].Doctor_id})" method="post" enctype="multipart/form-data">
+                    <div class="personal">
+              
+               <p>Personal information:</p>
+                        <input type="text" name="name" placeholder="Name" value="@firstDoctor[0].Name" />
+                        <br />
+                        <input type="tel" name="phone" value="@firstDoctor[0].Phone_num" placeholder="Phone" />
+                       
+                        <br />
+                        <input type="text" name="city" value="@firstDoctor[0].City" placeholder="city" required />
+                        <br />
+
+                        <div class="radio">
+                            <label>Male</label>
+                            <input type="radio" name="male" value="male" class="male_radio" checked="checked" />
+                            <br />
+                            <label>Female</label>
+                            <input type="radio" name="female" value="female" />
+                        </div>
+                    </div>
+
+                    <div class="professional">
+                        <p>Professional Information: </p>
+                        
+                        <input type="text" name="experience" placeholder="experience" value="@firstDoctor[0].Experience" />
+                        <br />
+                        <input type="text" name="specialization" placeholder="specialization" value="@firstDoctor[0].Specialty" />
+                        <br />
+
+                        @{int c = 1;
+
+                        }
+                       
+                    <!--AREASSSSS-->
+                        @foreach (var ar in firstArea)
+                        {
+                            string area = "area" + c, fees = "fees"+c, day = "days" + c;
+                         
+                        <input type="text" name='@area' placeholder="area1" value="@ar.Name"  />
+                        <br />
+                         <input type="text" name='@fees' placeholder="fees1" value="@ar.Fees"  />
+                        <br />
+                         <input type="text" name='@day' placeholder="days1" value="@ar.days" />
+                            
+                        <br />
+                        <input type="time" name="start_time1" placeholder="Area1 Start time" value="@ar.Start_time" />
+                        <input type="time" name="end_time1" placeholder="Area1 End time" value="@ar.End_time" />
+                        <br />   
+                                c++;
+                                    
+                        }
+                        <!--Diseases-->
+
+                        @{int b = 1;
+
+                        }
+
+                        <!--AREASSSSS-->
+                        @foreach (var ar in firstDisease)
+                        {
+                            string name = "name" + b;
+
+                            <input type="text" name='@name' placeholder="name1" value="@ar.Disease_name" />
+                            
+                            <br />
+                           
+                            b++;
+
+                        }
+
+                       
+                    
+
+
+
+
+
+                        <input type="file" name="image" />
+                        <input type="submit" name="Update" value="Update" style="color:#136DA2" onclick="alert('Record updated');" />
+                    </div>
+                </form>
+            </div>
+</div>
