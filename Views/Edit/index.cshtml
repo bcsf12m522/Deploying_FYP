@@ -15,7 +15,7 @@
 
 <div class="content">
             <div class="heading">
-                   <p style="color:#136DA2">Fill Required Information :</p>
+                  
             </div>
     <!--DOCTOR-->
 			<div class="form">
@@ -25,18 +25,23 @@
                     <div class="personal">
               
                <p>Personal information:</p>
+                <label>Doctor Name</label>
+
                         <input type="text" name="name" placeholder="Name" value="@firstDoctor[0].Name" />
-                        <br />
+
+                <label>Contact Number</label>
+
                         <input type="tel" name="phone" value="@firstDoctor[0].Phone_num" placeholder="Phone" />
                        
-                        <br />
-                        <input type="text" name="city" value="@firstDoctor[0].City" placeholder="city" required />
-                        <br />
+            <label>City</label>
+
+                         <input type="text" name="city" value="@firstDoctor[0].City" placeholder="city" required />
+                    
 
                         <div class="radio">
                             <label>Male</label>
                             <input type="radio" name="male" value="male" class="male_radio" checked="checked" />
-                            <br />
+                         
                             <label>Female</label>
                             <input type="radio" name="female" value="female" />
                         </div>
@@ -45,10 +50,20 @@
                     <div class="professional">
                         <p>Professional Information: </p>
                         
-                        <input type="text" name="experience" placeholder="experience" value="@firstDoctor[0].Experience" />
-                        <br />
+                    <label>Experience</label>   
+
+                         <input type="text" name="experience" placeholder="experience" value="@firstDoctor[0].Experience" />
+
+                    <label>Specializaion</label> 
+
                         <input type="text" name="specialization" placeholder="specialization" value="@firstDoctor[0].Specialty" />
-                        <br />
+
+                    <label>Education</label>
+
+                        <input type="text" name="education" placeholder="Education" value="@firstDoctor[0].Education" />
+
+
+                    <p>Areas infromation And Schedule</p>
 
                         @{int c = 1;
 
@@ -59,20 +74,34 @@
                         {
                             string area = "area" + c, fees = "fees"+c, day = "days" + c;
                          
-                        <input type="text" name='@area' placeholder="area1" value="@ar.Name"  />
-                        <br />
+                      <label>Area @c Name</label> 
+                            
+                          <input type="text" name='@area' placeholder="area1" value="@ar.Name"  />
+                            
+                        <label>Fees</label>
+                            
                          <input type="text" name='@fees' placeholder="fees1" value="@ar.Fees"  />
-                        <br />
+                            
+                        <label>Available Days</label>
+                            
                          <input type="text" name='@day' placeholder="days1" value="@ar.days" />
                             
-                        <br />
+                       <p style="font-size:24px">Timings of Area @c</p>  
+                            
+                       <label>Opening time</label> 
+                                   
                         <input type="time" name="start_time1" placeholder="Area1 Start time" value="@ar.Start_time" />
+                            
+                        <label>Closing time</label>
+                                
                         <input type="time" name="end_time1" placeholder="Area1 End time" value="@ar.End_time" />
-                        <br />   
+                            <br />
+                      
                                 c++;
                                     
                         }
                         <!--Diseases-->
+                        <p>Diseases Cure</p>
 
                         @{int b = 1;
 
@@ -83,9 +112,11 @@
                         {
                             string name = "name" + b;
 
-                            <input type="text" name='@name' placeholder="name1" value="@ar.Disease_name" />
+                      <label>Disease</label>   
                             
-                            <br />
+                               <input type="text" name='@name' placeholder="name1" value="@ar.Disease_name" />
+                            
+                            
                            
                             b++;
 
@@ -94,9 +125,10 @@
                        
                     
 
+                        <br />
 
-
-
+                        <img style="width:300px; height:200px;" src="~/Content/Images/@firstDoctor[0].image" alt="Image not Available" />
+                        <br />
 
                         <input type="file" name="image" />
                         <input type="submit" name="Update" value="Update" style="color:#136DA2" onclick="alert('Record updated');" />

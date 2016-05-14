@@ -31,34 +31,17 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th>
-          
-        </th>
-     <!--   <th>
-            Html.DisplayNameFor(model => model.Fees)
-        </th> -->
+
         <th>
             @Html.DisplayNameFor(model => model.Specialty)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Phone_num)
         </th>
-    <!--    <th>
-            Html.DisplayNameFor(model => model.Oppening_time)
-        </th>
-        <th>
-            Html.DisplayNameFor(model => model.Closing_time)
-        </th>
-        <th>
-            Html.DisplayNameFor(model => model.Days)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Gender)
         </th>
-        <th>
-            Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th> -->
+        <th> 
             @Html.DisplayNameFor(model => model.City)
         </th>
         <th>
@@ -67,7 +50,7 @@
         <th>
             @Html.DisplayNameFor(model => model.image)
         </th>
-        <th></th>
+    
     </tr>
 
 @foreach (var item in Model) {
@@ -78,33 +61,16 @@
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
-       <td>
-          
-        </td>
-        <td>
-    <!--        Html.DisplayFor(modelItem => item.Fees)
-        </td> -->
         <td>
             @Html.DisplayFor(modelItem => item.Specialty)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Phone_num)
         </td>
-    <!--    <td>
-            Html.DisplayFor(modelItem => item.Oppening_time)
-        </td>
         <td>
-            Html.DisplayFor(modelItem => item.Closing_time)
-        </td>
-        <td>
-            Html.DisplayFor(modelItem => item.Days)
-        </td>
-        <td>-->
             @Html.DisplayFor(modelItem => item.Gender)
         </td>
-     <!--   <td>
-            Html.DisplayFor(modelItem => item.Rating)
-        </td>-->
+       
         <td>
             @Html.DisplayFor(modelItem => item.City)
         </td>

@@ -2,6 +2,9 @@
 	margin:0;
 	padding:0;
 }
+label{
+    margin-left:10px;
+}
 .clear{
 	clear:both;
 	padding:0;
@@ -63,19 +66,20 @@
 	overflow:hidden;
 }
 .content .form{
-	width:50%;
+	width:80%;
 	margin:40px auto 0px auto;
 	border:2px solid #f4f4f4;
 	background-color:#f4f4f4;
 	
 }
 .content .form form{
-	margin:20px 60px;
+	margin:20px 40px;
+    border-radius:30px;
 }
 .content .form form input{
 	width:200px;
 	height:30px;
-	margin:30px 140px 0px 140px;
+	margin:30px 20px;
 	border-radius:5px;
 }
 .content .form form p{
@@ -88,6 +92,9 @@
 	height:10px;
 	display:inline;
 	margin-left:20px;
+}
+.content .form form input{
+    margin-right:20px;
 }
 .content .form form .radio label{
 	color:#136DA2;
