@@ -72,7 +72,7 @@
                     <!--AREASSSSS-->
                         @foreach (var ar in firstArea)
                         {
-                            string area = "area" + c, fees = "fees"+c, day = "days" + c;
+                            string area = "area" + c, fees = "fees" + c, day = "days" + c, longitude = "longitude" + c, latitude = "latitude" + c, start_time = "start_time" + c, end_time = "end_time" + c;
                          
                       <label>Area @c Name</label> 
                             
@@ -85,16 +85,24 @@
                         <label>Available Days</label>
                             
                          <input type="text" name='@day' placeholder="days1" value="@ar.days" />
+                         
+                         <label>longitude</label>
+
+                            <input type="number" step="any" name="@longitude" placeholder="longitude" value="@ar.logitude" />
+
+                         <label>latitude</label>
+
+                        <input type="number" step="any" name="@latitude" placeholder="latitude" value="@ar.latitude" />       
                             
                        <p style="font-size:24px">Timings of Area @c</p>  
                             
                        <label>Opening time</label> 
                                    
-                        <input type="time" name="start_time1" placeholder="Area1 Start time" value="@ar.Start_time" />
+                        <input type="time" name="@start_time" placeholder="Area1 Start time" value="@ar.Start_time" />
                             
                         <label>Closing time</label>
                                 
-                        <input type="time" name="end_time1" placeholder="Area1 End time" value="@ar.End_time" />
+                        <input type="time" name="@end_time" placeholder="Area1 End time" value="@ar.End_time" />
                             <br />
                       
                                 c++;
