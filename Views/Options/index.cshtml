@@ -14,10 +14,25 @@
             </div>
 			<div class="container">
             		<div class="container_in">
+
                           <p>Find doctor:</p>
+
                         <form action="@Url.Action("Index", "Admin_search")" method="get">
-                            <input type="search" name="search" value="" placeholder="Enter doctor Name or just click on button " />
-                            <input type="submit" value="Search Or Show All doctors" />
-                        </form></div>
+
+                            <input type="search" name="search" value="" placeholder="Enter doctor Name or just click on button " style="color: #136DA2" />
+                            <input type="submit" value="Search Or Show All doctors" style="color: #136DA2"  />
+
+                        </form>
+
+                        <form action="@Url.Action("index", "Add")" method="get">
+
+                            <input type="submit" value="Add new Doctor" style="color: #136DA2"/>
+
+                        </form>
+                        
+                    </div>
+
+               
+
             </div>
 </div>
