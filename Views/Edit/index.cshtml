@@ -73,37 +73,38 @@
                         @foreach (var ar in firstArea)
                         {
                             string area = "area" + c, fees = "fees" + c, day = "days" + c, longitude = "longitude" + c, latitude = "latitude" + c, start_time = "start_time" + c, end_time = "end_time" + c;
-                         
+                       <p style="font-size:24px">Area @c</p>  
+                       
+                                   
                       <label>Area @c Name</label> 
                             
                           <input type="text" name='@area' placeholder="area1" value="@ar.Name"  />
                             
                         <label>Fees</label>
                             
-                         <input type="text" name='@fees' placeholder="fees1" value="@ar.Fees"  />
+                         <input type="text" name='@fees' placeholder="fees1" value="@ar.Fees" style="margin-left:25px;"  />
                             
                         <label>Available Days</label>
                             
                          <input type="text" name='@day' placeholder="days1" value="@ar.days" />
-                         
-                         <label>longitude</label>
+                        <br /> 
+                         <label style="margin-left:20px;">longitude</label>
 
                             <input type="number" step="any" name="@longitude" placeholder="longitude" value="@ar.logitude" />
 
                          <label>latitude</label>
 
-                        <input type="number" step="any" name="@latitude" placeholder="latitude" value="@ar.latitude" />       
+                        <input type="number" step="any" name="@latitude" placeholder="latitude" value="@ar.latitude" />  
                             
-                       <p style="font-size:24px">Timings of Area @c</p>  
-                            
-                       <label>Opening time</label> 
+                         <label>Shift</label> 
                                    
-                        <input type="time" name="@start_time" placeholder="Area1 Start time" value="@ar.Start_time" />
+                        <input type="time" name="@start_time" placeholder="Shift" value="@ar.Start_time" style="margin-left:70px;" />     
                             
-                        <label>Closing time</label>
-                                
-                        <input type="time" name="@end_time" placeholder="Area1 End time" value="@ar.End_time" />
-                            <br />
+                       
+                            
+                      
+                            
+                     
                       
                                 c++;
                                     

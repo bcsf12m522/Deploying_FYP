@@ -2,6 +2,9 @@
 	margin:0;
 	padding:0;
 }
+label{
+    color:#136DA2;
+}
 .clear{
 	clear:both;
 	padding:0;
